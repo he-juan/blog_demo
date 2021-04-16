@@ -11,6 +11,7 @@
   import ShowBlog from './components/ShowBlog.vue'
   import Nav from './components/Nav.vue'
   import SingleBlog from './components/SingleBlog.vue'
+  import PersonalHomepage from './components/PersonalHomepage.vue'
 
 
   export default {
@@ -19,7 +20,8 @@
       AddBlog,
       ShowBlog,
       Nav,
-      SingleBlog
+      SingleBlog,
+      PersonalHomepage
     }
   }
 </script>

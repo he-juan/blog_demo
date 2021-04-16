@@ -7,6 +7,7 @@ import VueRouter from 'vue-router'
 import AddBlog from './components/AddBlog.vue'
 import ShowBlog from './components/ShowBlog.vue'
 import SingleBlog from './components/SingleBlog.vue'
+import PersonalHomepage from './components/PersonalHomepage'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
@@ -39,6 +40,7 @@ const router=new VueRouter({
   routes:[
     {path:'/',component:ShowBlog},
     {path:'/add',component:AddBlog},
+    {path:'/bar',component:PersonalHomepage},
     {path:'/single/:id',component:SingleBlog}   // 注意这里是如何给路由传参的
   ],
   mode:'history'

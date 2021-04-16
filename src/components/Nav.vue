@@ -7,6 +7,9 @@
       <li>
         <router-link to="/add">写博客</router-link>
       </li>
+      <li>
+        <router-link to="/bar">个人首页</router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -24,7 +27,7 @@
 <style scoped>
   ul {
     height: 60px;
-    background-color: crimson;
+    background-color: #dcdca2;
     text-align: center;
     line-height: 60px;
     margin-bottom: 20px;

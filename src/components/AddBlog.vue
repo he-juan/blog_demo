@@ -2,33 +2,33 @@
   <div id="add-blog">
     <h1>{{pageTitle}}</h1>
     <form action="#" v-if="!submited">
-      <label for="bolg-title">博客标题:</label>
-      <input type="text" id="blog-title" v-model="blog.title">
-      <label for="blog-content">博客内容:</label>
-      <textarea id="boog-content" cols="30" rows="10" v-model="blog.content"></textarea>
+        <label for="bolg-title">博客标题:</label>
+        <input type="text" id="blog-title" v-model="blog.title">
+        <label for="blog-content">博客内容:</label>
+        <textarea id="boog-content" cols="30" rows="10" v-model="blog.content"></textarea>
 
-      <label>博客分类：</label>
-      <div class="checkbox">
-        <label for="sing">歌曲 </label>
-        <input type="checkbox" id="sing" value="sing" v-model="blog.categories">
-        <label for="movie">影视 </label>
-        <input type="checkbox" id="movie" value="movie" v-model="blog.categories">
-        <label for="plan">规划 </label>
-        <input type="checkbox" id="plan" value="plan" v-model="blog.categories">
-        <label for="technology">技术 </label>
-        <input type="checkbox" id="technology" value="technology" v-model="blog.categories">
-      </div>
+        <label>博客分类：</label>
+        <div class="checkbox">
+          <label for="sing">歌曲 </label>
+          <input type="checkbox" id="sing" value="sing" v-model="blog.categories">
+          <label for="movie">影视 </label>
+          <input type="checkbox" id="movie" value="movie" v-model="blog.categories">
+          <label for="plan">规划 </label>
+          <input type="checkbox" id="plan" value="plan" v-model="blog.categories">
+          <label for="technology">技术 </label>
+          <input type="checkbox" id="technology" value="technology" v-model="blog.categories">
+        </div>
 
-      <label for="blog-author">博客作者:</label>
-      <select v-model="blog.author">
-        <option v-for="author in authors">{{author}}</option>
-      </select>
+        <label for="blog-author">博客作者:</label>
+        <select v-model="blog.author">
+          <option v-for="author in authors">{{author}}</option>
+        </select>
 
-      <button v-on:click.prevent="postBlog">添加博客</button>
+        <button v-on:click.prevent="postBlog">添加博客</button>
     </form>
 
     <!-- 展示输入的博客信息 -->
-    <div class="show-blog">
+    <div class="show-blog" v-if="submited">
       <p class="title">博客标题：{{blog.title}}</p>
       <p class="title">博客内容：</p>
       <p>{{blog.content}}</p>
@@ -46,7 +46,7 @@
 
 <script>
   export default {
-    name: '',
+    name: 'AddBlog',
     data() {
       return {
         blog: {
@@ -55,9 +55,9 @@
           categories: [],
           author: ""
         },
-        authors: ["FengZhen", "Tom", "Jack"],
+        authors: ["FengZhen", "Tom", "Jack",'shreily'],
         submited: false,
-        pageTitle: "博客总览",
+        pageTitle: "博客总概",
       }
     },
     methods: {
@@ -139,7 +139,7 @@
     height: 45px;
     display: block;
     margin: 10px 0px;
-    background-color: crimson;
+    background-color: #64c9dc;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -147,11 +147,12 @@
   }
 
   .show-blog {
-    background-color: #cccccc;
+    background-color: #4daedc;
     padding: 10px 30px;
   }
 
   .show-blog .title {
+    /*background-color: #4daedc;*/
     font-weight: bolder;
     margin: 20px 0px;
     /*color: crimson;*/
